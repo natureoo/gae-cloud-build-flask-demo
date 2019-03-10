@@ -53,6 +53,6 @@ def submitted_form():
 @app.errorhandler(500)
 def server_error(e):
     # Log the error and stacktrace.
-    logging.exception('An error occurred during a request.')
+    logging.exception('An error occurred during a requesttt.')
     return 'An internal error occurred.', 500
 # [END app]
