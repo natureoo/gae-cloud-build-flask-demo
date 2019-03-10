@@ -6,7 +6,7 @@ steps:
   args: ['pip', 'install', 'pytest']
 
 - name: "docker.io/library/python:2.7"
-  args: ['pytest', '-v', '-s', 'main_test.py']
+  args: ['/workspace/lib/pytest', '-v', '-s', 'main_test.py']
 
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
