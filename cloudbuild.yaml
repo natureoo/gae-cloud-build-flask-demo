@@ -3,9 +3,6 @@ steps:
   args: ['pip', 'install', '-t', '/workspace/lib', '-r', 'requirements.txt']
 
 - name: "docker.io/library/python:2.7"
-  args: ['pip', 'install', 'pytest']
-
-- name: "docker.io/library/python:2.7"
   args: ['/workspace/lib/pytest', '-v', '-s', 'main_test.py']
 
 - name: "gcr.io/cloud-builders/gcloud"
