@@ -1,0 +1,12 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/gae-cloud-build-flask', '.']
+
+- name: "docker.io/library/python:2.7"
+  args: ['pip', 'install', '-t', '/workspace/lib', '-r', 'requirements.txt']
+
+
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["app", "deploy"]
+
+timeout: "1600s
