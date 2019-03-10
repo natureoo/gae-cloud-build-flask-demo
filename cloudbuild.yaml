@@ -8,7 +8,6 @@ steps:
 - name: "docker.io/library/python:2.7"
   args: ['pytest', '-v', '-s', 'main_test.py']
 
-pip install pytest
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
 
