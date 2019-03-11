@@ -2,7 +2,7 @@ steps:
 - name: "docker.io/library/python:2.7"
   args: ['pip', 'install', '-t', '/workspace/lib', '-r', 'requirements.txt']
 
-- name: "docker.io/library/qnib/pytest"
+- name: "docker.io/library/qnib/pytest:latest"
   args: ['pytest', '-v', '-s', 'main_test.py']
 
 - name: "gcr.io/cloud-builders/gcloud"
