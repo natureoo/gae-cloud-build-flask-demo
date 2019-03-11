@@ -1,5 +1,5 @@
 FROM python:2.7
-COPY . .
-WORKDIR .
+COPY . /project
+WORKDIR /project
 RUN pip install pytest
 ENTRYPOINT ["pytest"]
