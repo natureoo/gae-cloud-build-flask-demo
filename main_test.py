@@ -24,7 +24,7 @@ def app():
 
 def test_form(app):
     r = app.get('/')
-    assert r.status_code == 200
+    assert r.status_code == 400
     assert 'Submit a form' in r.data.decode('utf-8')
 
 
